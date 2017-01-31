@@ -15,8 +15,8 @@ function cities(){
 			population: 1394928
 		},
 		{
-			city: 'Boston',
-			population: 667137
+			city: 'Saratoga Springs',
+			population: 26586
 		},
 		{
 			city: 'Chicago',
