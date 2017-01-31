@@ -11,20 +11,20 @@ function cities(){
 	//define two arrays for cities and population
 	var cityPop = [
 		{ 
-			city: 'Madison',
-			population: 233209
+			city: 'San Diego',
+			population: 1394928
 		},
 		{
-			city: 'Milwaukee',
-			population: 594833
+			city: 'Boston',
+			population: 667137
 		},
 		{
-			city: 'Green Bay',
-			population: 104057
+			city: 'Chicago',
+			population: 2695598
 		},
 		{
-			city: 'Superior',
-			population: 27244
+			city: 'Beijing',
+			population: 21700000
 		}
 	];
 
