@@ -4,6 +4,9 @@
 //initialize function called when the script loads
 function initialize(){
 	cities();
+	//jQueryAjax();
+	//call the debugAjax function that is defined later
+	debugAjax();
 };
 
 //function to create a table with cities and their populations
@@ -110,6 +113,29 @@ function addEvents(){
 	//using the on method to start the event listener for event clickme 
 	$('table').on('click', clickme);
 };
+
+//define the callback fucntion to execute the script to display the geojson file conetent after the data is retrived 
+	//from the server
+function debugCallback(response, status, jqXHRobject){
+	//print the string and the data readily retrived from the served into mydiv
+	$(mydiv).append('<br>GeoJSON data:<br>'+JSON.stringify(response));
+};
+// define the Ajax request function for data in geojson file to be sent to and retrived from server without loading time
+function debugAjax(){
+	//using the jquery ajax method to opent he server connection and get to the data in Megacities.geojson
+	$.ajax("data/MegaCities.geojson",{
+		//set the resposne type
+		dataType:"json",
+		//if the data request has been sent, call the callback fucntion
+		success: debugCallback
+		//function(response){
+			//debugCallback(mydata);
+		//}
+	});
+//	$(mydiv).append('<br>GeoJSON data:<br>' + JSON.stringify(mydata));
+
+};
+
 
 //call the initialize function when the document has loaded
 $(document).ready(initialize);
